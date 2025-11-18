@@ -4,8 +4,13 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "dev"
+    "dev": "nodemon main.js "
   },
   "author": "Volodymyr Kuchak",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^14.0.2",
+    "nodemon": "^3.1.11",
+    "superagent": "^10.2.3"
+  }
 }
