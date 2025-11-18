@@ -1,0 +1,11 @@
+{
+  "name": "backend-course-2025-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "author": "Volodymyr Kuchak",
+  "license": "ISC"
+}
