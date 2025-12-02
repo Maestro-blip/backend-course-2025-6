@@ -5,6 +5,8 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const multer = require('multer');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
 program.requiredOption('-h, --host <ip>','ip-adresa').requiredOption('-p, --port <port>','port').requiredOption('-c, --cache <directions>','direction to file');
 
@@ -33,6 +35,7 @@ try{
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 let upload = multer({dest: PHOTOFILE});
 
